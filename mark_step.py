@@ -41,10 +41,10 @@ def mark_step(marker_left = 'LHEE', marker_right = 'RHEE', plot = 0):
     lhee = np.asarray(vicon.GetTrajectory(vicon.GetSubjectNames()[0], 'LHEE'))[2]
     rhee = np.asarray(vicon.GetTrajectory(vicon.GetSubjectNames()[0], 'RHEE'))[2]
     
-    lhee_peaks, _ = find_peaks(lhee, prominence = 20) # Foot Off Gauche
-    rhee_peaks, _ = find_peaks(rhee, prominence = 20) # Foot Off Droit
-    lhee_peaks_inverse, _ = find_peaks(lhee*-1, prominence = 20) # Foot Strike Gauche
-    rhee_peaks_inverse, _ = find_peaks(rhee*-1, prominence = 20) # Foot Strike Droit
+    lhee_peaks, _ = find_peaks(lhee, prominence = 30) # Foot Off Gauche
+    rhee_peaks, _ = find_peaks(rhee, prominence = 30) # Foot Off Droit
+    lhee_peaks_inverse, _ = find_peaks(lhee*-1, prominence = 40) # Foot Strike Gauche
+    rhee_peaks_inverse, _ = find_peaks(rhee*-1, prominence = 40) # Foot Strike Droit
     
     [vicon.CreateAnEvent(vicon.GetSubjectNames()[0], 'Left', 'Foot Off', int(i), 0) for i in lhee_peaks]
     [vicon.CreateAnEvent(vicon.GetSubjectNames()[0], 'Right', 'Foot Off', int(i), 0) for i in rhee_peaks]
