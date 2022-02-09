@@ -2,10 +2,6 @@
 
 Library containing one function, namely mark_step(), allowing to automatically mark the foot contact/strike and the foot off in the current trial opened in the Vicon Nexus software.
 
-## Installation
-
-    pip install mark_step
-
 In order to use the function mark_step(), it is crucial to correctly installing the Vicon Nexus SDK.
 
 ## Get started
