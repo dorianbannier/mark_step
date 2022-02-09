@@ -20,7 +20,7 @@ In order to help in checking if the marking is accurate, it is possible to ask t
 ``` python
 ms.mark_step(plot = 1)
 ```
-If you want to use other markers to automatically mark the event's steps:
+By default, the script uses the 'LHEE' and 'RHEE' markers. If you want to use other markers to automatically mark the event's steps:
 
 ``` python
 ms.mark_step(marker_left = 'LTOE', marker_right = 'RTOE')
