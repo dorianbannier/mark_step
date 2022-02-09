@@ -11,18 +11,18 @@ The use of mark_step is basic:
 ``` python
 import mark_step as ms
 
-mark_step()
+ms.mark_step()
 ```
 
 Each time you open a trial in Vicon Nexus, you simple had to execute the mark_step() command. That's all.
 In order to help in checking if the marking is accurate, it is possible to ask to the function to draw a plot of the heel movement and to place on it the foot contact and foot off it detected:
 
 ``` python
-mark_step(plot = 1)
+ms.mark_step(plot = 1)
 ```
 If you want to use other markers to automatically mark the event's steps:
 
 ``` python
-mark_step(marker_left = 'LTOE', marker_right = 'RTOE')
+ms.mark_step(marker_left = 'LTOE', marker_right = 'RTOE')
 ```
 
